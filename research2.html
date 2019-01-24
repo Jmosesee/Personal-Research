@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research</title>
+    <style>
+        td {border-bottom:1px solid black;}
+        .Interested {background-color: #BFB;}
+        .Not_Interested {background-color: #FBB;}
+        .Satisfied {background-color: #BBF}
+    </style>
+</head>
+<body>
+    <h1>{{scraped['title']}}</h1>
+    {% for p in scraped['p']%}
+        {{p |safe}}
+    {% endfor %}
+    <button onClick="satisfied()">Satisfied</button>
+    <script src="../static/research2.js"></script>
+</body>
+</html>
